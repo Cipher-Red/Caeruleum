@@ -2,7 +2,7 @@
  An Open Source Forensics Tool and Command Execution Assistant designed for both forensic analysts and general users seeking simplified and efficient system operations.
 
  This tool/code may be used and modified freely, provided it adheres to international and local laws within your jurisdiction.
-![Alt Text](CA.JPG)
+![IMAGE](CA.jpg)
 # What is Caeruleum?
  Caeruleum is a lightweight, command-line-based tool designed to function on systems with limited resources. It leverages widely recognized commands to ensure compatibility across a broad range of Windows environments.
 
