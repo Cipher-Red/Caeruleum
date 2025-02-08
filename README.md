@@ -63,6 +63,25 @@
 * Prerequisites
  - Windows operating system
  - Command-line interface (CLI)
+ - 
+
+# Required Libraries
+
+To run this project, make sure you have the following libraries installed:
+
+- `winreg`
+- `pytsk3`
+- `colorama`
+- `subprocess`
+- `os`
+- `time`
+
+To install the required libraries, use the following pip command:
+
+```bash
+pip install pytsk3 colorama
+```
+Note: `winreg`, `subprocess`, `os`, and `time` are standard Python libraries and do not require installation.
 
 # Usage Instructions
  - Download or clone the repository.
@@ -76,3 +95,10 @@
 
 ##Legal Disclaimer##
  This tool must be used in compliance with international and local laws. The developers are not responsible for any misuse.
+
+ # Author & Maintainer
+ This project was created and is maintained by Qais Mohammad alqaissi.
+ # You can reach me at
+ * [linkedin](www.linkedin.com/in/qais-alqaissi-1b9295238)
+ * [Check out my portfolio](https://qaisalqaissi.netlify.app)
+ * Qipher09@proton.me
