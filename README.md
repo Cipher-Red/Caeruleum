@@ -63,10 +63,10 @@
  Full system scan
 
 # Getting Started
-* Prerequisites
+
+# Prerequisites
  - Windows operating system
  - Command-line interface (CLI)
- - 
 
 # Required Libraries
 
@@ -93,10 +93,10 @@ Note: `winreg`, `subprocess`, `os`, and `time` are standard Python libraries and
 # Contributions
  Contributions are welcome! If you have ideas for enhancements or bug fixes, feel free to fork the repository and submit a pull request.
 
-##License##
+# License #
  This project is licensed under the Apache License 2.0. See the LICENSE file for more details.
 
-##Legal Disclaimer##
+# Legal Disclaimer #
  This tool must be used in compliance with international and local laws. The developers are not responsible for any misuse.
 
  # Author & Maintainer
