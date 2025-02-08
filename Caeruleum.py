@@ -79,7 +79,7 @@ def update_device():
 # Gets a Websites IP address Using CMD
 def lookup_website_ip():
     print(Fore.BLUE +"Sure, I can help you find the IP address of a website. Let’s do this.")
-    Add = input(Fore.MAGENTA +"Please enter the website link (e.g., www.example.com): ")
+    Add = input("Please enter the website link (e.g., www.example.com): ")
     cmd_command = "nslookup"
     subprocess.run(["cmd", "/C", cmd_command + " " + Add])
     print(Fore.BLUE +"Here’s the IP address for the website you entered. Easy, right?")
@@ -87,7 +87,7 @@ def lookup_website_ip():
 # Disk Repair
 def manage_disk():
     print(Fore.RED +"Note that this may alter some information on the disk or corrupt it. Proceed with caution.")
-    com = input(Fore.MAGENTA +"Would you still like to proceed? |Yes|OR|No| ").lower()
+    com = input("Would you still like to proceed? |Yes|OR|No| ").lower()
     com = com.replace(" ", "")
     if com == "yes":
         print(Fore.BLUE +"Let me check your disks for you. This won’t take long...")
@@ -105,7 +105,7 @@ def manage_disk():
             print("Hmm, I couldn’t find any available drives. Let’s double-check.")
             return
 
-        disk_letter = input(Fore.MAGENTA +"Which drive would you like to repair? Enter the drive letter (e.g., C): ")
+        disk_letter = input("Which drive would you like to repair? Enter the drive letter (e.g., C): ")
 
         if disk_letter not in available_drives:
             print(Fore.RED +f"Oops! That drive letter isn’t valid. Available drives are: {', '.join(available_drives)}")
@@ -138,7 +138,7 @@ def get_usb_history():
     print(Fore.BLUE +"Let me fetch the USB history for you. This might take a second...")
     usb_path = r"SYSTEM\CurrentControlSet\Enum\USBSTOR"
     reg_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, usb_path)
-    print(Fore.WHITE +"| USB History Table |")
+    print("| USB History Table |")
     i = 0
 
     while True:
@@ -205,8 +205,8 @@ def recovery():
         else:
             print(robocopy_result.stdout.strip())
 
-    shadow = input(Fore.MAGENTA +"Please enter the shadow directory path (e.g., \\\\.\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\path\\to\\file): ")
-    destination = input(Fore.MAGENTA +"Where would you like to save the recovered file? Enter the destination path (e.g., C:\\RecoveredFiles\\file.txt): ")
+    shadow = input("Please enter the shadow directory path (e.g., \\\\.\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\path\\to\\file): ")
+    destination = input("Where would you like to save the recovered file? Enter the destination path (e.g., C:\\RecoveredFiles\\file.txt): ")
 
     shadow_path = f"\\\\?\\{shadow[4:]}\\"
     robocopy_command = f"robocopy {shadow_path} {destination} /S"
@@ -251,7 +251,7 @@ def disk_info():
     print(result.stdout)
     print(Fore.BLUE +"Here’s the disk information, love.")
 
-    com = input(Fore.MAGENTA +"Would you like to save the Disk Information? (Yes/No): ").lower()
+    com = input("Would you like to save the Disk Information? (Yes/No): ").lower()
     if com == "yes":
         output_file = "DiskInfo.txt"
         with open(output_file, "w") as file:
@@ -267,8 +267,8 @@ def image_gen():
     result = subprocess.run(["cmd", "/C", cmd_command])
     print(result.stdout)
 
-    dp = input(Fore.MAGENTA +"Please enter the device's path to create the image (e.g., \\\\.\\PhysicalDrive1): ").strip()
-    op = input(Fore.MAGENTA +"Now, where would you like to save the image? Enter the path and name (e.g., C:\\usb_image.dd): ").strip()
+    dp = input("Please enter the device's path to create the image (e.g., \\\\.\\PhysicalDrive1): ").strip()
+    op = input("Now, where would you like to save the image? Enter the path and name (e.g., C:\\usb_image.dd): ").strip()
 
     if not dp.startswith("\\\\.\\PhysicalDrive"):
         print(Fore.RED +"Oops! That device path doesn’t look right. Make sure it’s in the format \\\\.\\PhysicalDriveX (e.g., \\\\.\\PhysicalDrive1).")
@@ -291,7 +291,7 @@ def image_gen():
 # Malware Scan Using Windows Defender
 def malware_scan():
     try:
-        ans = input(Fore.MAGENTA +"Would you like to run a Quick Scan or a Full Scan? ").lower()
+        ans = input("Would you like to run a Quick Scan or a Full Scan? ").lower()
         ans = ans.replace(" ", "")
 
         if ans in ["quick", "quickscan"]:
@@ -370,7 +370,7 @@ def main():
     print(Fore.CYAN +"Hello, darling! I’m Caeruleum, your personal assistant. How can I help you today?")
 
     while True:
-        In = input(Fore.CYAN + "What would you like me to do? "+Fore.GREEN).lower()
+        In = input(Fore.CYAN + "What would you like me to do? "+Fore.BLUE).lower()
         In = In.replace(" ", "")
 
         if In in ["exit", "stop", "thatsall", "thatsit", "1"]:
