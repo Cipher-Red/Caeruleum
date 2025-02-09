@@ -15,7 +15,7 @@ def is_linux():
 def create_log():
     print(Fore.BLUE + "Starting the log creation process, darling. Let’s get this done efficiently.")
     logdir = input(Fore.MAGENTA + "Where would you like to save the log folder? Enter the directory, and I’ll handle the rest: ")
-    subprocess.run(["mkdir", "-p", logdir])
+    subprocess.run(["bash", "Scripts/FDB.sh", logdir], check=True)
     print("Log folder created successfully. You’re welcome, sweetheart.")
 
 # Feature 2: Network Scan
