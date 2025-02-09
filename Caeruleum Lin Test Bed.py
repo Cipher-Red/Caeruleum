@@ -2,7 +2,7 @@ import os
 import platform
 import subprocess
 import time
-from colorama import Fore, init
+from colorama import Fore, init, Style
 
 # Initialize colorama
 init(autoreset=True)
@@ -14,9 +14,36 @@ def is_linux():
 # Feature 1: Create Log Directory
 def create_log():
     print(Fore.BLUE + "Starting the log creation process, darling. Let’s get this done efficiently.")
+    
+    # Prompt for directory input
     logdir = input(Fore.MAGENTA + "Where would you like to save the log folder? Enter the directory, and I’ll handle the rest: ")
-    subprocess.run(["bash", "Scripts/FDB.sh", logdir], check=True)
-    print("Log folder created successfully. You’re welcome, sweetheart.")
+    
+    # Reset color for clean output
+    print(Style.RESET_ALL, end="")
+    
+    # Validate input directory
+    if not logdir:
+        print(Fore.RED + "Directory path cannot be empty. Please provide a valid location." + Style.RESET_ALL)
+        return
+    
+    # Expand user directory if needed
+    logdir = os.path.expanduser(logdir)
+    
+    # Ensure the path exists
+    if not os.path.exists(logdir):
+        print(Fore.YELLOW + "Directory doesn't exist. Creating it for you, sweetheart.")
+        os.makedirs(logdir, exist_ok=True)
+
+    # Run the script
+    try:
+        subprocess.run(["bash", "Scripts/FDB.sh", logdir], check=True)
+        print(Fore.GREEN + "Log folder created successfully. You’re welcome, sweetheart." + Style.RESET_ALL)
+    except FileNotFoundError:
+        print(Fore.RED + "Error: Script not found. Make sure 'Scripts/FDB.sh' exists and is executable." + Style.RESET_ALL)
+    except subprocess.CalledProcessError as e:
+        print(Fore.RED + f"Error during script execution: {e}. Check your commands." + Style.RESET_ALL)
+    except Exception as e:
+        print(Fore.RED + f"An unexpected error occurred: {e}" + Style.RESET_ALL)
 
 # Feature 2: Network Scan
 def net_scan():
@@ -301,4 +328,4 @@ def main():
             print("Hmm, I didn’t quite catch that. Could you try again?")
 
 if __name__ == "__main__":
-    main()
+    main()
