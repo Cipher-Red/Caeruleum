@@ -1,85 +1,85 @@
 # Caeruleum
-Caeruleum is a versatile, lightweight, and open-source tool designed to simplify system operations and forensic analysis for both professionals and general users. It operates via a command-line interface (CLI) and is optimized for systems with limited resources, making it accessible for a wide range of Windows environments.
- 
+Caeruleum is a versatile, lightweight, and open-source tool designed to simplify system operations and forensic analysis for both professionals and general users. It operates via a command-line interface (CLI) and is optimized for systems with limited resources, making it accessible for a wide range of Windows and Linux environments.
+
 <div align="center">
  <img src="CAB.png" alt="Portfolio Screenshot">
- </div>
+</div>
 
-# Key Features
+## Key Features
 
- 1. Network Scanning
- Scans the local network using the arp -a command to list devices and their IP addresses.
+1. **Network Scanning**  
+   Scans the local network using the `arp -a` command to list devices and their IP addresses.
 
- 2. System Logs Collection
- Generates a comprehensive log file containing:
- Event logs
- TCP connections 
- Process details
- User information
+2. **System Logs Collection**  
+   Generates a comprehensive log file containing:  
+   - Event logs  
+   - TCP connections  
+   - Process details  
+   - User information  
 
- 3. Battery Health Report
- Generates a detailed report on battery health for Windows devices with battery functionality.
+3. **Battery Health Report**  
+   Generates a detailed report on battery health for Windows devices with battery functionality.
 
- 4. Fetch Device IP Address
- Retrieves the current device’s IP address.
+4. **Fetch Device IP Address**  
+   Retrieves the current device’s IP address.
 
- 5. System Update
- Automates system updates for Windows.
+5. **System Update**  
+   Automates system updates for Windows and Linux.
 
- 6. Domain IP Fetcher
- Retrieves the IP address for a specified website domain.
+6. **Domain IP Fetcher**  
+   Retrieves the IP address for a specified website domain.
 
- 7. Disk Management & Repair
- Checks and repairs a specified disk.
+7. **Disk Management & Repair**  
+   Checks and repairs a specified disk.
 
- 8. Running Processes List
- Lists all processes currently running on the system.
+8. **Running Processes List**  
+   Lists all processes currently running on the system.
 
- 9. Autorun Program Detection
- Identifies all programs registered to launch at system startup.
+9. **Autorun Program Detection**  
+   Identifies all programs registered to launch at system startup.
 
- 10. USB Connection History
- Retrieves the history of all USB devices connected to the system.
+10. **USB Connection History**  
+    Retrieves the history of all USB devices connected to the system.
 
- 11. File Recovery
- Recovers deleted files by examining shadow copies and retrieving data.
- 
- 12. File Hash Generator
- Computes file hashes using algorithms such as MD5, SHA-1, and others.
+11. **File Recovery**  
+    Recovers deleted files by examining shadow copies and retrieving data.
 
- 13. Disk Information & Health Check
- Provides detailed disk information and health status.
+12. **File Hash Generator**  
+    Computes file hashes using algorithms such as MD5, SHA-1, and others.
 
- 14. Forensic Image Generation
- Creates forensic images of specified disks or drives, with the option to save as .raw or .iso.
+13. **Disk Information & Health Check**  
+    Provides detailed disk information and health status.
 
- 15. Malware Scan Using Windows Defender
- Initiates malware scans via Windows Defender:
- Quick scan
- Full system scan
+14. **Forensic Image Generation**  
+    Creates forensic images of specified disks or drives, with the option to save as `.raw` or `.iso`.
 
-# Getting Started
+15. **Malware Scan Using Windows Defender**  
+    Initiates malware scans via Windows Defender:  
+    - Quick scan  
+    - Full system scan  
 
-# Prerequisites
- - Windows operating system
- - Command-line interface (CLI)
+## Getting Started
 
-# Required Libraries
+### Prerequisites
+- **Windows or Linux operating system**  
+- **Command-line interface (CLI)**  
 
-To run this project, make sure you have the following libraries installed:
+### Required Libraries
+To run this project, make sure you have the following libraries installed:  
 
-- `winreg`
-- `pytsk3`
-- `colorama`
-- `subprocess`
-- `os`
-- `time`
+- `winreg`  
+- `pytsk3`  
+- `colorama`  
+- `subprocess`  
+- `os`  
+- `time`  
 
-To install the required libraries, use the following pip command:
+To install the required libraries, use the following pip command:  
 
 ```bash
 pip install pytsk3 colorama
 ```
+
 Note: `winreg`, `subprocess`, `os`, and `time` are standard Python libraries and do not require installation.
 
 # Usage Instructions
